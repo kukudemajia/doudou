@@ -9,10 +9,10 @@ Combine from Zero-S1/JD_tools(https://github.com/Zero-S1/JD_tools)
 // quantumultx
 // [task_local]
 // #京东宠汪汪
-// 15 1,2 * * * https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_joy.js, tag=京东宠汪汪, img-url=https://raw.githubusercontent.com/znz1992/Gallery/master/jdww.png, enabled=true
+// 15 1,2 * * * https://raw.githubusercontent.com/kukudemajia/doudou/master/jd_joy.js, tag=京东宠汪汪, img-url=https://raw.githubusercontent.com/znz1992/Gallery/master/jdww.png, enabled=true
 // Loon
 // [Script]
-// cron "15 1,2 * * *" script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_joy.js,tag=京东宠汪汪
+// cron "15 1,2 * * *" script-path=https://raw.githubusercontent.com/kukudemajia/doudou/master/jd_joy.js,tag=京东宠汪汪
 const name = '京东宠汪汪';
 const $ = new Env(name);
 const notify = $.isNode() ? require('./sendNotify') : '';
@@ -326,7 +326,7 @@ function taskVideo() {
   $.get(option, (err, resp, data) => {
     try {
       if (err) {
-        console.log('\n京东宠汪汪: API查询请求失败 ‼️‼️')
+        console.log('\n京东宠汪汪: API查询请求失败 !!!!')
       } else {
         data = JSON.parse(data);
       }
@@ -391,7 +391,7 @@ function sanVideo() {
   $.post(option, (err, resp, data) => {
     try {
       if (err) {
-        console.log('\n京东宠汪汪: API查询请求失败 ‼️‼️')
+        console.log('\n京东宠汪汪: API查询请求失败 !!!!')
       } else {
         data = JSON.parse(data);
       }
@@ -426,7 +426,7 @@ function request(url) {
   $.get(option, (err, resp, data) => {
     try {
       if (err) {
-        console.log('\n京东宠汪汪: API查询请求失败 ‼️‼️')
+        console.log('\n京东宠汪汪: API查询请求失败 !!!!')
       } else {
         data = JSON.parse(data);
       }
@@ -436,8 +436,8 @@ function request(url) {
       sleep(data);
     }
     // if (err) {
-    //   console.log("\n京东宠汪汪: API查询请求失败 ‼️‼️")
-    //   $.msg('京东宠汪汪', `脚本执行中断`, `京东宠汪汪: API查询请求失败 ‼️‼️`);
+    //   console.log("\n京东宠汪汪: API查询请求失败 !!!!")
+    //   $.msg('京东宠汪汪', `脚本执行中断`, `京东宠汪汪: API查询请求失败 !!!!`);
     //   $.done();
     // } else {
     //   try {
@@ -472,7 +472,7 @@ function requestPost(url, body, ContentType) {
   $.post(options, (err, resp, data) => {
     try {
       if (err) {
-        console.log('\n京东宠汪汪: API查询请求失败 ‼️‼️')
+        console.log('\n京东宠汪汪: API查询请求失败 !!!!')
       } else {
         data = JSON.parse(data);
       }
@@ -482,8 +482,8 @@ function requestPost(url, body, ContentType) {
       sleep(data);
     }
     // if (err) {
-    //   console.log("\n京东宠汪汪: API查询请求失败 ‼️‼️")
-    //   $.msg('京东宠汪汪', `${err.name}`, `京东宠汪汪: API查询请求失败 ‼️‼️`);
+    //   console.log("\n京东宠汪汪: API查询请求失败 !!!!")
+    //   $.msg('京东宠汪汪', `${err.name}`, `京东宠汪汪: API查询请求失败 !!!!`);
     //   $.done();
     // } else {
     //   try {
