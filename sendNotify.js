@@ -63,6 +63,12 @@ let IGOT_PUSH_KEY = '';
 let PUSH_PLUS_TOKEN = '';
 let PUSH_PLUS_USER = '';
 
+//自定义
+// =======================================通知信息用户名设置区域===========================================
+//此处填你申请的UNAME.
+
+let UNAME = '';
+
 //==========================云端环境变量的判断与接收=========================
 if (process.env.PUSH_KEY) {
   SCKEY = process.env.PUSH_KEY;
@@ -125,6 +131,11 @@ if (process.env.PUSH_PLUS_TOKEN) {
 if (process.env.PUSH_PLUS_USER) {
   PUSH_PLUS_USER = process.env.PUSH_PLUS_USER;
 }
+
+if (process.env.UNAME) {
+  UNAME = process.env.UNAME;
+}
+
 //==========================云端环境变量的判断与接收=========================
 
 
@@ -475,6 +486,9 @@ function qywxamNotify(text, desp) {
       html=desp.replace(/\n/g,"<br/>")    
       var json = JSON.parse(data);
       accesstoken = json.access_token;
+      if (UNAME) {
+        text = UNAME + text
+      }
       const options_textcard = {
         url: `https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=${accesstoken}`,
         json: {
