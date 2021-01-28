@@ -1,6 +1,7 @@
 #!/bin/sh
 set -e
-let VERSION = "2021-01-28"
+
+VERSION = "2021-01-28"
 
 #获取配置的自定义参数
 if [ $1 ]; then
