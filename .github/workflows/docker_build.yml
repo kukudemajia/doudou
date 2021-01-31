@@ -31,4 +31,4 @@ jobs:
           push: true
           tags: |
             kukudemajia/doudou:latest
-            kukudemajia/doudou:20210128
+            kukudemajia/doudou:20210131
